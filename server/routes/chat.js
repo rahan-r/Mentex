@@ -26,7 +26,7 @@ router.post("/chat/stream", async (req, res) => {
         { role: "system", content: sysPrompt },
         { role: "user", content: userPrompt },
       ],
-      model: "llama-3.3-70b-versatile",
+      model: "llama-3.1-8b-instant",
       temperature: 0.5,
       max_completion_tokens: 800,
       stream: true,
