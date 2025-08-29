@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Chat from './pages/Chat';
 import Auth from './pages/Auth';
 import AuthCallback from './pages/AuthCallback';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/auth/callback" element={<AuthCallback />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </>
   )
 }
