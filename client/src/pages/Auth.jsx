@@ -1,24 +1,22 @@
-import { LoginForm } from '@/components/login-form'
-import React, { useEffect } from 'react'
-import { Toaster } from "@/components/ui/sonner"
-import { useNavigate } from 'react-router-dom'
-
+import { LoginForm } from "@/components/login-form";
+import React, { useEffect } from "react";
+import { Toaster } from "@/components/ui/sonner";
+import { useNavigate } from "react-router-dom";
 
 function Auth() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate()
-
-   useEffect(() => {
-    const token = localStorage.getItem('mentex'); 
+  useEffect(() => {
+    const token = localStorage.getItem("mentex");
     if (token) {
-      navigate('/'); 
+      navigate("/");
     }
   }, [navigate]);
 
   return (
     <>
-      <div className="min-h-screen w-full relative bg-[radial-gradient(circle_at_center,_#5493FF,_transparent)]">
-        <div className="rounded-xl ml-[550px] bg-white it-font w-96 relative translate-y-[150px]">
+      <div className="min-h-screen w-full flex items-center justify-center bg-[radial-gradient(circle_at_center,_#5493FF,_transparent)]">
+        <div className="rounded-xl bg-white it-font w-full max-w-sm mx-4 p-6 shadow-md">
           <LoginForm />
         </div>
         <Toaster />
@@ -27,4 +25,4 @@ function Auth() {
   );
 }
 
-export default Auth
+export default Auth;
