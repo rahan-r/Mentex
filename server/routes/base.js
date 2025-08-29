@@ -12,7 +12,7 @@ const REDIRECT_URL = process.env.REDIRECT_URL;
 
 
 
-router.get("/", async (req, res) => {
+router.get("/health", async (req, res) => {
   res.send("<h1>Mentex Running</h1>");
 });
 
