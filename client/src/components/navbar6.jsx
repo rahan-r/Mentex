@@ -65,7 +65,7 @@ const Navbar6 = () => {
       <div className="container">
         <nav className="flex items-center justify-between">
           <a
-            href="https://www.shadcnblocks.com"
+            href="https://www.mentex.run"
             className="flex items-center gap-2"
           >
             <img
